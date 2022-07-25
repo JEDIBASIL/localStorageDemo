@@ -1,5 +1,5 @@
 const fileInput = document.getElementById('fileInput');
-const movieForm = document.getElementById('movieForm');
+const form = document.getElementById('form');
 const uploadImg = document.getElementById('uploadImg');
 const title = document.getElementById('title');
 const description = document.getElementById('description');
@@ -12,7 +12,7 @@ if(localStorage.getItem('movie')){
 let img;
 
 const setPath = (img)=>{
-    return `./img/${img}`
+    return `../images/${img}`
 }
 
 fileInput.addEventListener('change',()=>{
@@ -21,7 +21,7 @@ fileInput.addEventListener('change',()=>{
     uploadImg.setAttribute('src',setPath(img));
 })
 
-movieForm.addEventListener('submit',(e)=>{
+form.addEventListener('submit',(e)=>{
     e.preventDefault();
     movie.push({id:Date.now(), title:title.value, img:img, description:description.value});
     (localStorage.setItem('movie',JSON.stringify(movie)));
