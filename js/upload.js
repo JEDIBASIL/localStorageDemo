@@ -20,3 +20,9 @@ fileInput.addEventListener('change',()=>{
      img = pathUrl[pathUrl.length -1];
     uploadImg.setAttribute('src',setPath(img));
 })
+
+movieForm.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    movie.push({id:Date.now(), title:title.value, img:img, description:description.value});
+    (localStorage.setItem('movie',JSON.stringify(movie)));
+});
