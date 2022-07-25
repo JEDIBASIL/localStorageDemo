@@ -8,3 +8,6 @@ let movie = [];
 if(localStorage.getItem('movie')){
     movie = JSON.parse(localStorage.getItem('movie'));
 }
+
+let img;
+
