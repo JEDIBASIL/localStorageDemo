@@ -11,3 +11,6 @@ if(localStorage.getItem('movie')){
 
 let img;
 
+const setPath = (img)=>{
+    return `./img/${img}`
+}
