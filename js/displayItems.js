@@ -6,7 +6,7 @@ if (localStorage.getItem("movie")) {
 }
 
 const setPath = (img)=>{
-    return `./img/${img}`
+    return `../images/${img}`
 }
 
 for (const file in movie) {
